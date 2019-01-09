@@ -51,7 +51,7 @@ public class RegisterEmployerRequest implements Serializable {
 	@Valid
 	@NotNull
 	@Size(min = 1, max = 200)
-	private String addressrWard;
+	private String addressWard;
 	
 	@Valid
 	@NotNull
@@ -133,12 +133,12 @@ public class RegisterEmployerRequest implements Serializable {
 		this.addressStreet = addressStreet;
 	}
 
-	public String getAddressrWard() {
-		return addressrWard;
+	public String getAddressWard() {
+		return addressWard;
 	}
-
-	public void setAddressrWard(String addressrWard) {
-		this.addressrWard = addressrWard;
+	
+	public void setAddressWard(String addressWard) {
+		this.addressWard = addressWard;
 	}
 
 	public String getAddressDistrict() {

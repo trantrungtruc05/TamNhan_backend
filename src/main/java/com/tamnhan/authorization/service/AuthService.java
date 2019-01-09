@@ -173,7 +173,7 @@ public class AuthService {
 			company.setCompanyIndustry(companyIndustry);
 			company.setAddressNo(registerEmployerRequest.getAddressNo());
 			company.setAddressStreet(registerEmployerRequest.getAddressStreet());
-			company.setAddressWard(registerEmployerRequest.getAddressrWard());
+			company.setAddressWard(registerEmployerRequest.getAddressWard());
 			company.setAddressDistrict(registerEmployerRequest.getAddressDistrict());
 			company.setAddressCity(registerEmployerRequest.getAddressCity());
 
