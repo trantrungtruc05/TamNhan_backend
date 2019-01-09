@@ -316,5 +316,21 @@ Response:
 }
 ```
 
+# 9. Get All CompanyIndustry
+
+URL: http://127.0.0.1:8080/api/getAllCompanyIndustry --- GET
+
+
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "industryName": "IT - Software"
+    }
+]
+```
+
 
 
