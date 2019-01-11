@@ -22,9 +22,6 @@ public class Job {
 	private Long id;
 	
 	@OneToOne
-	private JobDetail jobDetail;
-	
-	@OneToOne
 	private CompanyIndustry companyIndustry;
 	
 	@OneToOne
@@ -44,14 +41,22 @@ public class Job {
 	
 	@Column(name = "tags", length = 1000, nullable = true)
 	private String tags;
+	
+	@Column(name = "job_responsibilites", nullable = false)
+	private String jobResponsibilites;
+	
+	@Column(name = "skill", nullable = false)
+	private String skill;
+	
+	@Column(name = "qualification", nullable = false)
+	private String qualification;
 
 	public Job() {}
 	
-	public Job(Long id, JobDetail jobDetail, CompanyIndustry companyIndustry, Company company, String workLocation, String jobName,
-			String salary, Date createdAt, String tags) {
+	public Job(Long id, CompanyIndustry companyIndustry, Company company, String workLocation, String jobName,
+			String salary, Date createdAt, String tags, String jobResponsibilites, String skill, String qualification) {
 		super();
 		this.id = id;
-		this.jobDetail = jobDetail;
 		this.companyIndustry = companyIndustry;
 		this.company = company;
 		this.workLocation = workLocation;
@@ -59,6 +64,9 @@ public class Job {
 		this.salary = salary;
 		this.createdAt = createdAt;
 		this.tags = tags;
+		this.jobResponsibilites = jobResponsibilites;
+		this.skill = skill;
+		this.qualification = qualification;
 	}
 
 	public Long getId() {
@@ -67,14 +75,6 @@ public class Job {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public JobDetail getJobDetail() {
-		return jobDetail;
-	}
-
-	public void setJobDetail(JobDetail jobDetail) {
-		this.jobDetail = jobDetail;
 	}
 
 	public CompanyIndustry getCompanyIndustry() {
@@ -132,4 +132,30 @@ public class Job {
 	public void setTags(String tags) {
 		this.tags = tags;
 	}
+
+	public String getJobResponsibilites() {
+		return jobResponsibilites;
+	}
+
+	public void setJobResponsibilites(String jobResponsibilites) {
+		this.jobResponsibilites = jobResponsibilites;
+	}
+
+	public String getSkill() {
+		return skill;
+	}
+
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+
+	public String getQualification() {
+		return qualification;
+	}
+
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	
+	
 }

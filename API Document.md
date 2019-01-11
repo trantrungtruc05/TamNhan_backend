@@ -233,12 +233,10 @@ Response:
 [
     {
         "id": 1,
-        "jobDetail": {
-            "id": 1,
-            "jobResponsibilites": "Test",
-            "skill": "test",
-            "qualification": "Test"
-        },
+        "jobResponsibilites": "Test",
+		"skill": "test",
+		"qualification": "Test",
+        
         "companyIndustry": {
             "id": 1,
             "industryName": "IT - Software"
@@ -281,12 +279,12 @@ Response:
 ```
 {
     "id": 1,
-    "jobDetail": {
-        "id": 1,
-        "jobResponsibilites": "Test",
-        "skill": "test",
-        "qualification": "Test"
-    },
+    
+    
+	"jobResponsibilites": "Test",
+	"skill": "test",
+	"qualification": "Test",
+   
     "companyIndustry": {
         "id": 1,
         "industryName": "IT - Software"
@@ -345,12 +343,10 @@ Response:
 [
     {
         "id": 1,
-        "jobDetail": {
-            "id": 1,
-            "jobResponsibilites": "Test",
-            "skill": "test",
-            "qualification": "Test"
-        },
+        "jobResponsibilites": "Test",
+		"skill": "test",
+		"qualification": "Test",
+        
         "companyIndustry": {
             "id": 1,
             "industryName": "IT - Software"
