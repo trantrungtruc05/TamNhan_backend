@@ -8,6 +8,8 @@ import com.tamnhan.authorization.model.Employer;
 @Repository
 public interface EmployerRepository extends JpaRepository<Employer, Long> {
 	
+	Employer getEmployerByEmailAndPassword(String email, String password);
+	
 	Employer getEmployerByEmail(String email);
 
 }

@@ -8,6 +8,8 @@ import com.tamnhan.authorization.model.Candidate;
 @Repository
 public interface CandidateRepository extends JpaRepository<Candidate, Long>, CandidateRepositoryCustom {
 	
+	Candidate getCandidateByEmailAndPassword(String email, String password);
+	
 	Candidate getCandidateByEmail(String email);
 
 }

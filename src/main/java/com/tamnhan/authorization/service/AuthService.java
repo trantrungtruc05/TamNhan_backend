@@ -68,7 +68,7 @@ public class AuthService {
 	public ResponseEntity<?> loginCandidate(LoginRequest loginRequest) {
 		try {
 
-			Candidate candidate = candidateRepository.getCandidateByEmail(loginRequest.getEmail());
+			Candidate candidate = candidateRepository.getCandidateByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword());
 
 			if (candidate == null) {
 				return new ResponseEntity<AuthUserException>(new AuthUserException(), HttpStatus.OK);
@@ -114,7 +114,7 @@ public class AuthService {
 	public ResponseEntity<?> loginEmployer(LoginRequest loginRequest) {
 		try {
 
-			Employer employer = employerRepository.getEmployerByEmail(loginRequest.getEmail());
+			Employer employer = employerRepository.getEmployerByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword());
 
 			if (employer == null) {
 				return new ResponseEntity<AuthUserException>(new AuthUserException(), HttpStatus.OK);
