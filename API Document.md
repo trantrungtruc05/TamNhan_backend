@@ -220,7 +220,9 @@ Request:
 {
 	"keyword": "dev",
 	"companyIndustryId": 1,
-	"workLocation": "HCM"
+	"workLocation": "HCM",
+	"limit": 10,
+	"offset": 0
 }
 
 ```
@@ -328,6 +330,55 @@ Response:
     {
         "id": 1,
         "industryName": "IT - Software"
+    }
+]
+```
+
+# 10. Get All Job
+
+URL: http://127.0.0.1:8080/api/getAllJobs/10/0 --- GET
+
+
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "jobDetail": {
+            "id": 1,
+            "jobResponsibilites": "Test",
+            "skill": "test",
+            "qualification": "Test"
+        },
+        "companyIndustry": {
+            "id": 1,
+            "industryName": "IT - Software"
+        },
+        "company": {
+            "id": 1,
+            "companyName": "VIB Bank",
+            "companyIndustry": {
+                "id": 1,
+                "industryName": "IT - Software"
+            },
+            "website": null,
+            "addressNo": "111A",
+            "addressStreet": "Pasteur",
+            "addressWard": "Ben Nghe",
+            "addressDistrict": "1",
+            "addressCity": "TPHCM",
+            "quantityEmployee": 0,
+            "facebookLink": null,
+            "googleLink": null,
+            "linkedinLink": null,
+            "description": null
+        },
+        "workLocation": "HCM",
+        "jobName": "Java Dev",
+        "salary": "10000",
+        "createdAt": "2017-12-31T17:00:00.000+0000",
+        "tags": "Java"
     }
 ]
 ```

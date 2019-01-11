@@ -20,8 +20,25 @@ public class JobService {
 
 	public ResponseEntity<?> searchJob(SearchRequest searchRequest) {
 		try {
-			List<Job> jobs = jobRepository.findAllJob(searchRequest.getKeyword(), searchRequest.getCompanyIndustryId(),
-					searchRequest.getWorkLocation());
+			List<Job> jobs = jobRepository.findAllJobKeyword(searchRequest.getKeyword(), searchRequest.getCompanyIndustryId(),
+					searchRequest.getWorkLocation(), searchRequest.getLimit(), searchRequest.getOffset());
+
+			if (jobs.size() == 0) {
+				return new ResponseEntity<JobSearchException>(new JobSearchException(), HttpStatus.OK);
+			}
+			
+			return new ResponseEntity<List<Job>>(jobs, HttpStatus.OK);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+	
+	public ResponseEntity<?> findAllJob(int limit, int offset) {
+		try {
+			List<Job> jobs = jobRepository.findAllJob(limit, offset);
 
 			if (jobs.size() == 0) {
 				return new ResponseEntity<JobSearchException>(new JobSearchException(), HttpStatus.OK);
