@@ -19,7 +19,7 @@ import com.tamnhan.authorization.request.LoginRequest;
 import com.tamnhan.authorization.service.AuthService;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
 public class LoginController {
 
