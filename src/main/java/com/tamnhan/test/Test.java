@@ -20,13 +20,15 @@ import net.oauth.jsontoken.discovery.VerifierProviders;
 public class Test {
 
 	public static void main(String[] args) throws java.security.SignatureException {
-		System.out.println("test");
+//		System.out.println("test");
+//		
+////		String token = createJsonWebToken("trantrungtruc", 2L);
+//		JsonObject payload = verifyToken("eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VyQ29tcGFueU9yQXBwTmFtZUhlcmUiLCJhdWQiOiJOb3RSZWFsbHlJbXBvcnRhbnQiLCJpYXQiOjE1NDYyMjY1NjAsImV4cCI6MTU0NjM5OTM2MCwiaW5mbyI6eyJ1c2VySWQiOiJ0cmFudHJ1bmd0cnVjIiwidGVzdCI6Imtha2EifX0.GmlgCx4rBuuDPSyWd5j5GA0HgbFDFBsSNoZVzSbzv2I");
+//		
+////		System.out.println(token);
+//		System.out.println(getUserId(payload));
 		
-//		String token = createJsonWebToken("trantrungtruc", 2L);
-		JsonObject payload = verifyToken("eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJZb3VyQ29tcGFueU9yQXBwTmFtZUhlcmUiLCJhdWQiOiJOb3RSZWFsbHlJbXBvcnRhbnQiLCJpYXQiOjE1NDYyMjY1NjAsImV4cCI6MTU0NjM5OTM2MCwiaW5mbyI6eyJ1c2VySWQiOiJ0cmFudHJ1bmd0cnVjIiwidGVzdCI6Imtha2EifX0.GmlgCx4rBuuDPSyWd5j5GA0HgbFDFBsSNoZVzSbzv2I");
-		
-//		System.out.println(token);
-		System.out.println(getUserId(payload));
+		System.out.println(10%3);
 	}
 //
 //	private static String createJWT() {
